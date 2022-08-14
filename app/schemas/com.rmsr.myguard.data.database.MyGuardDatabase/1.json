@@ -1,0 +1,526 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a4eef8ef48022a6c434471a10f93485e",
+    "entities": [
+      {
+        "tableName": "queries",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`_queryId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `que_content` TEXT NOT NULL COLLATE NOCASE, `que_type` TEXT NOT NULL, `que_uuid` BLOB NOT NULL, `que_hint` TEXT DEFAULT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "_queryId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "que_content",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "que_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uuid",
+            "columnName": "que_uuid",
+            "affinity": "BLOB",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hint",
+            "columnName": "que_hint",
+            "affinity": "TEXT",
+            "notNull": false,
+            "defaultValue": "NULL"
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "_queryId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_queries_que_uuid",
+            "unique": true,
+            "columnNames": [
+              "que_uuid"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_queries_que_uuid` ON `${TABLE_NAME}` (`que_uuid`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "breaches",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`_breachId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `bre_name` TEXT NOT NULL COLLATE NOCASE, `bre_created` INTEGER NOT NULL, `bre_logoPath` TEXT NOT NULL, `bre_title` TEXT NOT NULL COLLATE NOCASE, `bre_description` TEXT NOT NULL, `bre_domain` TEXT NOT NULL COLLATE NOCASE, `bre_discoveredDate` TEXT NOT NULL, `bre_pwnCount` INTEGER NOT NULL, `bre_compromisedData` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "_breachId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "leakName",
+            "columnName": "bre_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdTime",
+            "columnName": "bre_created",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "logoPath",
+            "columnName": "bre_logoPath",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "bre_title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "bre_description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "domain",
+            "columnName": "bre_domain",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "bre_discoveredDate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pwnCount",
+            "columnName": "bre_pwnCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "compromisedData",
+            "columnName": "bre_compromisedData",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "_breachId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_breaches_bre_name",
+            "unique": true,
+            "columnNames": [
+              "bre_name"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_breaches_bre_name` ON `${TABLE_NAME}` (`bre_name`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "search_history",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`his_query_id` INTEGER NOT NULL, `his_created` INTEGER NOT NULL, `his_accessed` INTEGER NOT NULL, `his_accessCount` INTEGER NOT NULL, PRIMARY KEY(`his_query_id`), FOREIGN KEY(`his_query_id`) REFERENCES `queries`(`_queryId`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "queryId",
+            "columnName": "his_query_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdTime",
+            "columnName": "his_created",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastAccessTime",
+            "columnName": "his_accessed",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "accessCount",
+            "columnName": "his_accessCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "his_query_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_search_history_his_query_id",
+            "unique": false,
+            "columnNames": [
+              "his_query_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_search_history_his_query_id` ON `${TABLE_NAME}` (`his_query_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "queries",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "his_query_id"
+            ],
+            "referencedColumns": [
+              "_queryId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "history_breach_xref",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`his_x_bre__query_id` INTEGER NOT NULL, `his_x_bre__breach_id` INTEGER NOT NULL, PRIMARY KEY(`his_x_bre__query_id`, `his_x_bre__breach_id`), FOREIGN KEY(`his_x_bre__breach_id`) REFERENCES `breaches`(`_breachId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`his_x_bre__query_id`) REFERENCES `search_history`(`his_query_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "historyId",
+            "columnName": "his_x_bre__query_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "breachId",
+            "columnName": "his_x_bre__breach_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "his_x_bre__query_id",
+            "his_x_bre__breach_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "breaches",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "his_x_bre__breach_id"
+            ],
+            "referencedColumns": [
+              "_breachId"
+            ]
+          },
+          {
+            "table": "search_history",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "his_x_bre__query_id"
+            ],
+            "referencedColumns": [
+              "his_query_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "schedules",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`_scheduleId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sch_query_id` INTEGER NOT NULL, `sch_isMuted` INTEGER NOT NULL DEFAULT FALSE, `sch_created` INTEGER NOT NULL, FOREIGN KEY(`sch_query_id`) REFERENCES `queries`(`_queryId`) ON UPDATE CASCADE ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "_scheduleId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "queryId",
+            "columnName": "sch_query_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isMuted",
+            "columnName": "sch_isMuted",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "FALSE"
+          },
+          {
+            "fieldPath": "createdTime",
+            "columnName": "sch_created",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "_scheduleId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_schedules_sch_query_id",
+            "unique": true,
+            "columnNames": [
+              "sch_query_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_schedules_sch_query_id` ON `${TABLE_NAME}` (`sch_query_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "queries",
+            "onDelete": "RESTRICT",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "sch_query_id"
+            ],
+            "referencedColumns": [
+              "_queryId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "scan_sessions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`_sessionId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `scn_created` INTEGER NOT NULL, `scn_started` INTEGER NOT NULL, `scn_reqStarted` INTEGER NOT NULL, `scn_reqEnded` INTEGER NOT NULL, `scn_requestsAvg` INTEGER NOT NULL, `scn_ended` INTEGER NOT NULL, `scn_responded` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "_sessionId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdTime",
+            "columnName": "scn_created",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTime",
+            "columnName": "scn_started",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requestStartTime",
+            "columnName": "scn_reqStarted",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requestEndTime",
+            "columnName": "scn_reqEnded",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requestsAvgTime",
+            "columnName": "scn_requestsAvg",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endTime",
+            "columnName": "scn_ended",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userRespond",
+            "columnName": "scn_responded",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "_sessionId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "scan_schedule_xref",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`scn_x_sch__session_id` INTEGER NOT NULL, `scn_x_sch__schedule_id` INTEGER NOT NULL, PRIMARY KEY(`scn_x_sch__session_id`, `scn_x_sch__schedule_id`), FOREIGN KEY(`scn_x_sch__session_id`) REFERENCES `scan_sessions`(`_sessionId`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`scn_x_sch__schedule_id`) REFERENCES `schedules`(`_scheduleId`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "sessionId",
+            "columnName": "scn_x_sch__session_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scheduleId",
+            "columnName": "scn_x_sch__schedule_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "scn_x_sch__session_id",
+            "scn_x_sch__schedule_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "scan_sessions",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "scn_x_sch__session_id"
+            ],
+            "referencedColumns": [
+              "_sessionId"
+            ]
+          },
+          {
+            "table": "schedules",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "scn_x_sch__schedule_id"
+            ],
+            "referencedColumns": [
+              "_scheduleId"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "schedule_scan_record",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`rec_schedule_id` INTEGER NOT NULL, `rec_breach_id` INTEGER NOT NULL, `rec_session_id` INTEGER, `rec_notified` INTEGER NOT NULL, `rec_notifyTime` INTEGER NOT NULL, `rec_acknowledged` INTEGER NOT NULL, `rec_acknowledgeTime` INTEGER NOT NULL, PRIMARY KEY(`rec_schedule_id`, `rec_breach_id`), FOREIGN KEY(`rec_session_id`) REFERENCES `scan_sessions`(`_sessionId`) ON UPDATE CASCADE ON DELETE SET NULL , FOREIGN KEY(`rec_schedule_id`) REFERENCES `schedules`(`_scheduleId`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "scheduleId",
+            "columnName": "rec_schedule_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "breachId",
+            "columnName": "rec_breach_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionId",
+            "columnName": "rec_session_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userNotified",
+            "columnName": "rec_notified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notifyTime",
+            "columnName": "rec_notifyTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userAcknowledged",
+            "columnName": "rec_acknowledged",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "acknowledgeTime",
+            "columnName": "rec_acknowledgeTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "rec_schedule_id",
+            "rec_breach_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_schedule_scan_record_rec_session_id",
+            "unique": false,
+            "columnNames": [
+              "rec_session_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_schedule_scan_record_rec_session_id` ON `${TABLE_NAME}` (`rec_session_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "scan_sessions",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "rec_session_id"
+            ],
+            "referencedColumns": [
+              "_sessionId"
+            ]
+          },
+          {
+            "table": "schedules",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "rec_schedule_id"
+            ],
+            "referencedColumns": [
+              "_scheduleId"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a4eef8ef48022a6c434471a10f93485e')"
+    ]
+  }
+}

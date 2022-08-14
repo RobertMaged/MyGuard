@@ -1,0 +1,60 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyGuard" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+
+        <!--    same as above-->
+        <!--        semi final colors-->
+        <!--        #DEE8EE #EFF4F7 -->
+        <item name="android:windowBackground">#EFF4F7</item>
+        <!--        <item name="android:background">#EFF4F7</item>-->
+        <item name="backgroundColor">#EFF4F7
+        </item>    <!-- not sure about these attr just for settingFrag -->
+        <item name="colorPrimary">#37596d</item>
+        <item name="colorOnBackground">#BDD2DE
+        </item>   <!-- not sure about these attr just for settingFrag -->
+        <item name="colorPrimaryVariant">#073042</item>
+        <item name="colorOnPrimary">#EFF4F7</item>
+        <item name="colorAccent">#64869b</item>
+        <item name="colorSecondary">#376D5C</item>
+        <item name="colorSecondaryVariant">#054233</item>
+        <item name="colorOnSecondary">#000000</item>
+        <item name="colorSurface">#EFF4F7</item>
+        <item name="colorOnSurface">#376D5C</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+    </style>
+
+
+    <style name="BottomAppBarStyle" parent="Widget.MaterialComponents.BottomNavigationView.PrimarySurface">
+
+    </style>
+
+
+    <style name="FragmentStyle" parent="Theme.MyGuard">
+        <item name="android:background">#EFF4F7</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:backgroundTint">?attr/colorOnBackground</item>
+        <item name="android:background">@drawable/round_corners</item>
+    </style>
+
+    <style name="ThemeOverlay.Design.TextInputEditText.MyInputTheme" parent="">
+        <item name="boxCornerRadiusTopEnd">@dimen/_15sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_15sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_15sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_15sdp</item>
+        <item name="boxStrokeColor">@color/transparent</item>
+        <item name="boxStrokeWidth">0dp</item>
+    </style>
+
+
+    <!--    <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar" >-->
+    <!--        <item name="android:windowBackground">@drawable/splash_image</item>-->
+    <!--        <item name="android:statusBarColor">#37596d</item>-->
+
+    <!--    </style>-->
+</resources>

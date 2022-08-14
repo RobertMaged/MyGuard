@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.rmsr.myguard.presentation.ui.settingsfragment.SchedulesCheckIntervalDialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_20sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|end"
+                android:text="At: " />
+
+            <TimePicker
+                android:id="@+id/check_time_diag_time_picker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:scrollbars="none"
+                android:timePickerMode="spinner" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/check_time_diag_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_30sdp">
+
+            <RadioButton
+                android:id="@+id/check_time_diag_radio_daily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily" />
+
+            <RadioButton
+                android:id="@+id/check_time_diag_radio_four_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Every 4 days (recommended)" />
+
+            <RadioButton
+                android:id="@+id/check_time_diag_radio_two_weeks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Every 2 Weeks" />
+
+            <RadioButton
+                android:id="@+id/check_time_diag_radio_monthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rmsr.myguard">
+
+    <application>
+        <activity
+            android:name=".presentation.ui.HiltTestActivity"
+            android:exported="false" />
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>
+
+
+    <!--    &lt;!&ndash; If you want to disable android.startup completely. &ndash;&gt;-->
+    <!--<provider-->
+    <!--android:name="androidx.startup.InitializationProvider"-->
+    <!--android:authorities="${applicationId}.androidx-startup"-->
+    <!--tools:node="remove">-->
+    <!--</provider>-->
+    <!--    Otherwise, remove only the WorkManagerInitializer node.-->
+
+
+    <!--<provider-->
+    <!--android:name="androidx.startup.InitializationProvider"-->
+    <!--android:authorities="${applicationId}.androidx-startup"-->
+    <!--android:exported="false"-->
+    <!--tools:node="merge">-->
+    <!--&lt;!&ndash; If you are using androidx.startup to initialize other components &ndash;&gt;-->
+    <!--<meta-data-->
+    <!--    android:name="androidx.work.WorkManagerInitializer"-->
+    <!--    android:value="androidx.startup"-->
+    <!--    tools:node="remove" />-->
+    <!--</provider>-->

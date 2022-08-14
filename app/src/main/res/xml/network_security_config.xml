@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config>
+        <domain
+            cleartextTrafficPermitted="false"
+            includeSubdomains="true">haveibeenpwned.com
+        </domain>
+        <pin-set>
+            <pin digest="SHA-256">6JQSRbjIwXEdA6gGXmFprIJe5765iOSSIhEpfgzMG7A=</pin>
+            <pin digest="SHA-256">FEzVOUp4dF3gI0ZVPRJhFbSJVXR+uQmMH65xhs1glH4=</pin>
+            <pin digest="SHA-256">Y9mvm0exBk1JoQ57f9Vm28jKo5lFm/woKcVxrYxu80o=</pin>
+        </pin-set>
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+
+    <!--    <domain-config>-->
+    <!--        <domain-->
+    <!--            cleartextTrafficPermitted="false"-->
+    <!--            includeSubdomains="true">firestore.googleapis.com-->
+    <!--        </domain>-->
+
+
+    <!--        <pin-set>-->
+    <!--            &lt;!&ndash;            fireStore&ndash;&gt;-->
+    <!--            <pin digest="SHA-256">ToH+OeautleNhIqn0cUovq9WVDOw0gFEg8JfbugzyyE=</pin>-->
+    <!--            &lt;!&ndash;            goggleapis.com&ndash;&gt;-->
+    <!--            &lt;!&ndash;            <pin digest="SHA-256">uzbbyHV8nCkXzynn7sJ/pcL0lAYBKP9kkN3mMEwuB0s=</pin>&ndash;&gt;-->
+
+    <!--            <pin digest="SHA-256">YZPgTZ+woNCCCIW3LH2CxQeLzB/1m42QcCTBSdgayjs=</pin>-->
+    <!--            <pin digest="SHA-256">iie1VXtL7HzAMF+/PVPR9xzT80kQxdZeJ+zduCB3uj0=</pin>-->
+    <!--        </pin-set>-->
+    <!--        <trust-anchors>-->
+    <!--            <certificates src="system" />-->
+    <!--        </trust-anchors>-->
+
+    <!--    </domain-config>-->
+
+</network-security-config>

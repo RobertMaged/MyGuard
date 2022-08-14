@@ -1,0 +1,5 @@
+/build
+
+/src/authDebug/java/com.rmsr.myguard.data.remote/Fire.kt
+/src/authRelease/java/com.rmsr.myguard.data.remote/Fire.kt
+/google-services.json

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    >-->
+
+<!--    <data>-->
+<!--        <import type="android.view.View"/>-->
+<!--        <variable-->
+<!--            name="myViewModel"-->
+<!--            type="com.rmsr.myguard.presentation.ui.viewmodel.MainViewModel" />-->
+
+<!--        <variable-->
+<!--            name="mainHome"-->
+<!--            type="com.rmsr.myguard.presentation.ui.homefragment.HomeFragment" />-->
+<!--    </data>-->
+
+<!--        android:background="@color/purple_700"-->
+<!--        android:background="#5C6BC0"-->
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_motion_layout"
+    style="@style/FragmentStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    app:layoutDescription="@xml/fragment_email_scene"
+    tools:context="com.rmsr.myguard.presentation.ui.homefragment.HomeFragment">
+
+    <ProgressBar
+        android:id="@+id/home_progress_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/transparent"
+        android:elevation="@dimen/_4sdp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/custom_progressbar"
+        android:indeterminateDuration="1000"
+        android:paddingVertical="@dimen/_8sdp"
+        android:translationZ="@dimen/_4sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/home_submit_search_button"
+        app:layout_constraintEnd_toEndOf="@id/home_submit_search_button"
+        app:layout_constraintStart_toStartOf="@id/home_submit_search_button"
+        app:layout_constraintTop_toTopOf="@id/home_submit_search_button"
+        tools:visibility="visible" />
+
+    <!--            style="?android:attr/progressBarStyle"-->
+    <TextView
+        android:id="@+id/home_welcome_info"
+        style="?attr/textAppearanceHeadline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:lines="2"
+        android:paddingHorizontal="@dimen/_4sdp"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:text="@string/home_frag_welcome_info"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/material_group_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--            android:visibility="@{myViewModel.isLoading() == true ? View.VISIBLE : View.GONE}"-->
+
+    <TextView
+        android:id="@+id/home_data_provider_note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:autoLink="web"
+        android:background="@drawable/bottom_round_corners"
+        android:backgroundTint="?attr/colorOnBackground"
+        android:gravity="center_horizontal|center_vertical"
+        android:lines="1"
+        android:text="@string/have_i_been_pwned"
+        android:textColorLink="#673AB7"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/home_result_recycler_view"
+        app:layout_constraintEnd_toEndOf="@id/home_result_recycler_view"
+        app:layout_constraintStart_toStartOf="@id/home_result_recycler_view" />
+
+
+    <!--            android:layout_marginVertical="@dimen/_10sdp"-->
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_result_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:background="@drawable/round_corners"
+        android:nestedScrollingEnabled="true"
+        android:paddingBottom="@dimen/_12sdp"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_submit_search_button" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/home_submit_search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/home_frag_search_button"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toTopOf="@id/home_result_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_search_input_layout" />
+
+
+    <!--            android:layout_marginTop="@dimen/_25sdp"-->
+    <!--            android:layout_marginBottom="@dimen/_30sdp"-->
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/material_group_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="invisible"
+        app:checkedButton="@id/date_sort_material_group_item"
+        app:layout_constraintBottom_toTopOf="@id/home_search_input_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_welcome_info"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/name_sort_material_group_item"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:text="@string/home_frag_name_sort_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/date_sort_material_group_item"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_frag_date_sort_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pwned_count_sort_material_group_item"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_frag_pwned_count_sort_button" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/material_group_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:gravity="center_horizontal|center_vertical"
+        app:checkedButton="@id/email_material_group_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_welcome_info"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/email_material_group_item"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_frag_email_category_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/phone_material_group_item"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:text="@string/home_frag_phone_category_button" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/domain_material_group_item"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_frag_domain_category_button" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/home_search_input_layout"
+        style="@style/ThemeOverlay.Design.TextInputEditText.MyInputTheme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:autofillHints="emailAddress|phone"
+        android:hint="@string/home_frag_email_hint"
+        app:endIconDrawable="@drawable/ic_info"
+        app:endIconMode="custom"
+        app:layout_constraintBottom_toTopOf="@id/home_submit_search_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/material_group_category">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="?attr/colorOnBackground"
+            android:imeOptions="actionSearch"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/_15ssp" />
+        <!--                style="@style/EditTextStyle"-->
+        <!--                android:background="@drawable/round_corners"-->
+
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout><!--</layout>-->
+
+
+    <!--                    android:focusedByDefault="true"-->
+    <!--            android:focusable="true"-->
+    <!--            android:focusableInTouchMode="true"-->
+    <!--            android:textColorHint="@color/edit_text_hint_color"-->
+    <!--        <EditText-->
+    <!--            android:id="@+id/email_search_edit_text"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="@dimen/_45sdp"-->
+    <!--            android:layout_marginHorizontal="@dimen/_8sdp"-->
+    <!--            android:layout_marginVertical="@dimen/_20sdp"-->
+    <!--            style="@style/EditTextStyle"-->
+    <!--            android:hint="@string/home_frag_email_hint"-->
+    <!--            android:inputType="textEmailAddress"-->
+    <!--            android:paddingHorizontal="@dimen/_10sdp"-->
+    <!--            android:textSize="@dimen/_15sdp"-->
+    <!--            android:transitionName="test_breach_name"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/material_group" />-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/info_email_search"-->
+    <!--            style="@style/info_button_style"-->
+    <!--            android:visibility="gone"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/email_search_edit_text"-->
+    <!--            app:layout_constraintEnd_toEndOf="@id/email_search_edit_text"-->
+    <!--            app:layout_constraintTop_toTopOf="@id/email_search_edit_text"-->
+    <!--            app:srcCompat="@drawable/ic_info" />-->
+
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/domain_search_edit_text"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="@dimen/_45sdp"-->
+    <!--            android:layout_marginHorizontal="@dimen/_8sdp"-->
+    <!--            android:layout_marginVertical="@dimen/_20sdp"-->
+    <!--            android:background="@drawable/round_corners"-->
+    <!--            android:backgroundTint="@color/cardview_light_background"-->
+    <!--            android:hint="Search for Domain"-->
+    <!--            android:inputType="textEmailAddress"-->
+    <!--            android:paddingHorizontal="@dimen/_10sdp"-->
+    <!--            android:textSize="@dimen/_15ssp"-->
+    <!--            android:transitionName="test_breach_name"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/email_search_edit_text" />-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/info_domain_search"-->
+    <!--            style="@style/info_button_style"-->
+    <!--            android:visibility="visible"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/domain_search_edit_text"-->
+    <!--            app:layout_constraintEnd_toEndOf="@id/domain_search_edit_text"-->
+    <!--            app:layout_constraintTop_toTopOf="@id/domain_search_edit_text"-->
+    <!--            app:srcCompat="@drawable/ic_info" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/number_search_edit_text"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="@dimen/_45sdp"-->
+    <!--            android:layout_marginHorizontal="@dimen/_8sdp"-->
+    <!--            android:layout_marginVertical="@dimen/_20sdp"-->
+    <!--            android:background="@drawable/round_corners"-->
+    <!--            android:backgroundTint="@color/cardview_light_background"-->
+    <!--            android:hint="Search for Number"-->
+    <!--            android:inputType="textEmailAddress"-->
+    <!--            android:paddingHorizontal="@dimen/_10sdp"-->
+    <!--            android:textSize="@dimen/_15ssp"-->
+    <!--            android:transitionName="test_breach_name"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/domain_search_edit_text" />-->
+
+    <!--        <ImageButton-->
+    <!--            android:id="@+id/info_number_search"-->
+    <!--            style="@style/info_button_style"-->
+    <!--            android:visibility="visible"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/number_search_edit_text"-->
+    <!--            app:layout_constraintEnd_toEndOf="@id/number_search_edit_text"-->
+    <!--            app:layout_constraintTop_toTopOf="@id/number_search_edit_text"-->
+    <!--            app:srcCompat="@drawable/ic_info" />-->

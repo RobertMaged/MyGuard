@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical"
+    tools:context="com.rmsr.myguard.presentation.ui.homefragment.BreachDetailDialogFragment"
+    tools:layout_height="match_parent"
+    tools:layout_width="match_parent">
+
+    <ProgressBar
+        android:id="@+id/email_progress_bar"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:autoLink="web"
+        android:background="#60ffffff"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/have_i_been_pwned"
+        android:textColorLink="#673AB7"
+        android:visibility="gone"
+
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/email_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:layout_weight="0"
+        android:elevation="@dimen/_2sdp"
+        android:gravity="start"
+        android:lineSpacingExtra="@dimen/_3sdp"
+        android:minHeight="@dimen/_50sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:translationZ="@dimen/_2sdp"
+        android:visibility="gone"
+
+        tools:background="@color/white"
+        tools:height="@dimen/_50sdp"
+        tools:visibility="visible" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detail_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:visibility="visible" />
+
+</LinearLayout>

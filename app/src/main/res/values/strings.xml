@@ -1,0 +1,97 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">MyGuard</string>
+    <!--    Main Activity Strings-->
+    <string name="main_activity_online_network_state">Back online</string>
+    <string name="main_activity_offline_network_state">No internet connection</string>
+    <!--    #End of Main Activity Strings-->
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="have_i_been_pwned">All data provided by <a href="https://haveibeenpwned.com/">haveibeenpwned.com</a> </string>
+
+
+    <!--  Home Fragment Strings-->
+    <string name="home_frag_welcome_info">
+        Check if a domain or your email or phone is in a data breach.</string>
+
+    <string name="breach_leak_massage">
+        Oh no — pwned!\nPwned in %1$,d data breaches.</string>
+
+    <string name="breach_safe_massage">
+        Good news — no pwnage found!\nNo breached accounts.</string>
+
+    <string name="home_frag_search_button">Search</string>
+
+    <!--    recycler-->
+    <string name="domain_name">Domain name: %1$s</string>
+    <string name="breach_date">Breach date: %1$s</string>
+    <string name="compromised_data">Compromised data:  %1$s.</string>
+    <string name="description">Description: \n%1$s</string>
+    <!--    #End recycler-->
+
+    <string name="home_frag_email_category_button">Email</string>
+    <string name="home_frag_phone_category_button">Phone Number</string>
+    <string name="home_frag_domain_category_button">Domain</string>
+
+    <string name="home_frag_date_sort_button">Date</string>
+    <string name="home_frag_name_sort_button">Name</string>
+    <string name="home_frag_pwned_count_sort_button">Pwned count</string>
+
+    <string name="home_frag_email_hint">Check for Email</string>
+    <string name="home_frag_phone_number_hint">Check for Phone number</string>
+    <string name="home_frag_domain_hint">Check for Domain or domain title</string>
+    <string name="home_frag_invalid_search_error">invalid search</string>
+
+    <string name="home_frag_email_category_info">e.g username@example.com</string>
+    <string name="home_frag_phone_category_info">
+        International or EG numbers formats.\n e.g 201011112222, 01011112222</string>
+    <string name="home_frag_domain_category_info">e.g facebook, facebook.com</string>
+    <string name="home_frag_wait_breaches_loading">Just wait</string>
+    <string name="settings_frag_label">Settings</string>
+
+    <!--  #End of Home Fragment Strings-->
+
+    <!--    Password Fragment Strings-->
+    <string name="password_welcome_info">Check if your password is in a data breach.</string>
+    <string name="password_search_button">Search</string>
+
+    <string name="password_leaked_massage">Oh no — pwned! \nThis password has been seen %1$,d times before,\n\nThis password has previously appeared in a data breach and should never be used. If you\'ve ever used it anywhere before, change it!</string>
+
+
+    <string name="password_safe_massage">Good news — no pwnage found!\nThis password wasn\'t found in any of the Pwned Passwords loaded into MyGuard.\nThat doesn\'t necessarily mean it\'s a good password, merely that it\'s not indexed in our database.</string>
+
+    <string name="password_frag_passEditText_hint">Check for Password</string>
+    <string name="main_activity_bottomnav_more_button_title">More</string>
+    <string name="main_activity_bottomnav_schedules_button_title">Schedules</string>
+    <string name="main_activity_bottomnav_password_button_title">Password</string>
+    <string name="main_activity_bottomnav_home_button_title">Home</string>
+    <string name="main_activity_bottomnav_home_button_tip">Check For Emails</string>
+    <string name="main_activity_bottomnav_password_button_tip">Check For Passwords</string>
+    <string name="main_activity_bottomnav_saved_accounts_button_tip">Schedule Check For Emails</string>
+    <string name="main_activity_bottomnav_more_button_tip">More</string>
+    <string name="error_empty_search">Empty search</string>
+    <string name="error_invalid_email">Invalid Email</string>
+    <string name="error_invalid_phone">Invalid Phone number</string>
+    <string name="schedule_add_new_edittext_hint">Schedule</string>
+    <string name="settings_schedules_scan_interval">Schedules preferred time</string>
+    <!--  #End of Password Fragment Strings-->
+
+    <!--    Settings fragment strings-->
+    <string name="settings_new_leaks_only_switch_title">New leaks only</string>
+    <string name="settings_new_leaks_only_switch_summary_on">Only show notification when new leaks found.</string>
+    <string name="settings_new_leaks_only_switch_summary_off">By default notification appears after every schedules scan.</string>
+    <string name="settings_about_section_label">About</string>
+    <string name="settings_term_and_conditions_page">Terms and Conditions</string>
+    <string name="settings_privacy_policy">Privacy Policy</string>
+    <string name="settings_app_icons_page_title">App icons</string>
+    <string name="settings_app_icons_page_summary">Provided by Icons8</string>
+    <string name="settings_schedules_section_label">Schedules</string>
+    <!--    #End Settings fragment strings-->
+
+    <!--    errors-->
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="unknown_error_contain_message">Unknown error\n<xliff:g>%1$s</xliff:g></string>
+    <string name="unknown_error">Unknown error happened</string>
+    <string name="navgraph_add_schedule_frag_label">Add Schedule</string>
+    <string name="settings_app_version">Version</string>
+</resources>

@@ -1,0 +1,151 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyGuard" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+
+        <!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--        <item name="colorAccent">@color/colorAccent</item>-->
+        <!--        <item name="android:textColor">#000000</item>-->
+        <!--        <item name="windowActionModeOverlay">true</item>-->
+
+        <!--        <item name="colorPrimary">#2a9d8f</item>-->
+        <!--        <item name="colorPrimaryDark">#006e62</item>-->
+        <!--        <item name="colorAccent">#64cfbf</item>-->
+        <!--        <item name="colorSecondary">#e9c46a</item>-->
+        <!--        <item name="android:textColorPrimary">#000000</item>-->
+
+        <!--        logo colors-->
+        <!--        <item name="colorPrimary">#533579</item>-->
+        <!--        <item name="colorPrimaryDark">#260d4c</item>-->
+        <!--        <item name="colorAccent">#8160a8</item>-->
+        <!--        <item name="colorSecondary">#c46ee0</item>-->
+        <!--        <item name="colorSurface">#c46ee0</item>-->
+        <!--        <item name="android:textColorPrimary">#ffffff</item>-->
+
+
+        <!--                <item name="colorPrimary">#37596d</item>-->
+        <!--                <item name="colorPrimaryVariant">#073042</item>-->
+        <!--                <item name="colorOnPrimary">#ffffff</item>-->
+        <!--                <item name="colorAccent">#64869b</item>-->
+        <!--                <item name="colorSecondary">#3ddc84</item>-->
+        <!--                <item name="colorSecondaryVariant">#00a956</item>-->
+        <!--                <item name="colorOnSecondary">#000000</item>-->
+        <!--                <item name="android:textColorPrimary">#212121</item>-->
+        <!--                <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
+
+        <!--    same as above-->
+        <!--        semi final colors-->
+        <!--        #DEE8EE #EFF4F7 -->
+        <item name="android:windowBackground">#EFF4F7</item>
+        <!--        <item name="android:background">#EFF4F7</item>-->
+        <item name="backgroundColor">#EFF4F7</item>
+        <!-- not sure about these attr just for settingFrag -->
+        <item name="colorPrimary">@color/color_primary_custom</item>
+        <item name="colorOnBackground">@color/color_on_background_custom
+        </item>   <!-- not sure about these attr just for settingFrag -->
+        <item name="colorPrimaryVariant">@color/color_primary_variant_custom</item>
+        <item name="colorOnPrimary">@color/color_on_primary_custom</item>
+        <item name="colorAccent">@color/color_accent_custom</item>
+        <item name="colorSecondary">@color/color_secondary_custom</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant_custom</item>
+        <item name="colorOnSecondary">@color/color_on_secondary_custom</item>
+        <item name="colorSurface">@color/color_surface_custom</item>
+        <item name="colorOnSurface">@color/color_on_surface_custom</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="textInputStyle">@style/ThemeOverlay.Design.TextInputEditText.MyInputTheme</item>
+        <item name="colorError">@color/error_red_color</item>
+        <item name="android:colorError" tools:targetApi="o">@color/error_red_color</item>
+
+
+        <!--        <item name="colorPrimary">#607d8b</item>-->
+        <!--        <item name="colorPrimaryVariant">#435761</item>-->
+        <!--        <item name="colorOnPrimary">#7f97a2</item>-->
+        <!--        <item name="colorAccent">#7C4DFF</item>-->
+        <!--        <item name="colorSecondary">#aa00ff</item>-->
+        <!--        <item name="colorSecondaryVariant">#7600b2</item>-->
+        <!--        <item name="colorOnSecondary">#bb33ff</item>-->
+        <!--        <item name="android:textColorPrimary">#212121</item>-->
+
+
+    </style>
+
+    <style name="BottomAppBarStyle" parent="Widget.MaterialComponents.BottomNavigationView.PrimarySurface">
+
+    </style>
+
+
+    <style name="FragmentStyle" parent="Theme.MyGuard">
+        <item name="android:background">#EFF4F7</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:backgroundTint">?attr/colorOnBackground</item>
+        <item name="android:background">@drawable/round_corners</item>
+    </style>
+
+    <style name="ThemeOverlay.Design.TextInputEditText.MyInputTheme" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxCornerRadiusTopEnd">@dimen/_15sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_15sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_15sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_15sdp</item>
+        <item name="boxStrokeColor">@color/transparent</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="strokeColor">@color/transparent</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+
+    <!--    <style name="Preference.PreferenceScreen" parent="Theme.MyGuard" >-->
+    <!--        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>-->
+    <!--        <item name=""-->
+    <!--        <item name="android:colorBackground">@color/darkGreen</item>-->
+    <!--        <item name="background">@color/darkGreen</item>-->
+    <!--    </style>-->
+
+
+    <!--        <style name="Theme.MyGuard.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+
+    <!--        <style name="Theme.MyGuard.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+
+    <!--        &lt;!&ndash; ToolBar &ndash;&gt;-->
+    <!--        <style name="ToolBarStyle" parent="Theme.MyGuard">-->
+    <!--            <item name="android:textColorPrimary">@color/white</item>-->
+    <!--            <item name="android:textColorSecondary">@color/white</item>-->
+    <!--            <item name="actionMenuTextColor">@color/white</item>-->
+
+    <!--        </style>-->
+
+
+    <!-- for text -->
+    <!--original size : 12sp-->
+    <!--        <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">-->
+    <!--            <item name="android:textSize">12sp</item>-->
+    <!--            <item name="android:textColor">@color/white</item>-->
+    <!--            &lt;!&ndash;<item name="textAllCaps">false</item>&ndash;&gt;-->
+    <!--        </style>-->
+
+
+    <!--    <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">-->
+    <!--        <item name="android:windowBackground">@drawable/splash_image</item>-->
+    <!--        <item name="android:statusBarColor">#37596d</item>-->
+
+    <!--    </style>-->
+
+
+    <!-- Primary brand color. -->
+    <!--        <item name="colorPrimary">@color/purple_500</item>-->
+    <!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
+    <!--        <item name="colorOnPrimary">@color/white</item>-->
+    <!-- Secondary brand color. -->
+    <!--        <item name="colorSecondary">@color/teal_200</item>-->
+    <!--        <item name="colorSecondaryVariant">@color/teal_700</item>-->
+    <!--        <item name="colorOnSecondary">@color/black</item>-->
+    <!-- Status bar color. -->
+    <!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
+    <!-- Customize your theme here. -->
+
+</resources>

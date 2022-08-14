@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_4sdp"
+    android:layout_marginVertical="@dimen/_2sdp"
+    app:cardCornerRadius="@dimen/_4sdp"
+    app:cardElevation="@dimen/_4sdp">
+    <!--        app:shapeAppearanceOverlay="@drawable/round_corners"-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+        <!--            app:layoutDescription="@xml/breach_list_item_scene"-->
+        <!--            android:animateLayoutChanges="true"-->
+
+        <ImageView
+            android:id="@+id/list_item_breach_logo"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:adjustViewBounds="true"
+            android:background="@color/beau_blue"
+            app:layout_constraintBottom_toTopOf="@+id/expanded_info"
+            app:layout_constraintEnd_toStartOf="@+id/main_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--                android:backgroundTint="@android:color/darker_gray"-->
+
+        <LinearLayout
+            android:id="@+id/main_info"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/expanded_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/list_item_breach_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1">
+
+
+            <!--                app:layout_constraintHorizontal_chainStyle="spread"-->
+            <!--                app:layout_constraintVertical_chainStyle="spread"-->
+            <!--                app:layout_constraintHorizontal_weight="3"-->
+            <!--                app:layout_constraintVertical_weight="2"-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/list_item_breach_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|start"
+                android:text="@string/domain_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/list_item_breach_data"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|start"
+                android:text="@string/breach_date" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/expanded_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_info"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="5"
+            tools:visibility="visible">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/list_item_compromised_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|start"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/compromised_data" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/list_item_breach_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|start"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/description" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/expand_icon"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/list_item_breach_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/list_item_breach_logo"
+            app:srcCompat="@drawable/ic_down_arrow" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

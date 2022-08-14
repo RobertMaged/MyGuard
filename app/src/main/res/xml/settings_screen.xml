@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ListPreference
+        android:entryValues="@array/save_lang_arr"
+        app:entries="@array/user_lang_arr"
+        app:isPreferenceVisible="false"
+        app:key="language"
+        app:title="Language"
+        app:useSimpleSummaryProvider="true" />
+
+    <PreferenceCategory
+        app:isPreferenceVisible="false"
+        app:title="App">
+        <SwitchPreference
+            app:defaultValue="false"
+            app:isPreferenceVisible="true"
+            app:key="INCOGNITO_MODE"
+            app:summary="Stop remembering search history if on, all data is on your local device only."
+            app:title="Incognito Mode" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="@string/settings_schedules_section_label">
+
+        <Preference
+            app:dependency="SCHEDULES_CHECK_ENABLED"
+            app:isPreferenceVisible="true"
+            app:key="Schedule_Check_Interval_Type_And_Time"
+            app:title="@string/settings_schedules_scan_interval" />
+
+        <SwitchPreference
+            android:summaryOff="@string/settings_new_leaks_only_switch_summary_off"
+            app:defaultValue="false"
+            app:key="NOTIFY_ON_NEW_LEAKS_ONLY"
+            app:summaryOn="@string/settings_new_leaks_only_switch_summary_on"
+            app:title="@string/settings_new_leaks_only_switch_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="help_category"
+        app:title="@string/settings_about_section_label">
+
+
+        <Preference
+            app:key="terms_and_conditions"
+            app:persistent="false"
+            app:title="@string/settings_term_and_conditions_page">
+
+        </Preference>
+
+        <Preference
+            app:key="privacy_policy"
+            app:persistent="false"
+            app:title="@string/settings_privacy_policy" />
+
+
+        <Preference
+            app:key="webpage"
+            app:persistent="false"
+            app:summary="@string/settings_app_icons_page_summary"
+            app:title="@string/settings_app_icons_page_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://icons8.com" />
+        </Preference>
+
+        <Preference
+            app:key="app_version"
+            app:persistent="false"
+            app:title="@string/settings_app_version" />
+
+
+    </PreferenceCategory>
+
+    <SwitchPreference
+        app:defaultValue="true"
+        app:isPreferenceVisible="false"
+        app:key="SCHEDULES_CHECK_ENABLED"
+        app:title="Schedules Check" />
+
+
+    <SwitchPreference
+        app:defaultValue="false"
+        app:isPreferenceVisible="false"
+        app:key="dark_mode"
+        app:title="Dark mode" />
+</PreferenceScreen>

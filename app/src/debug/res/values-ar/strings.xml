@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyGuard</string>
+    <string name="have_i_been_pwned">هذه النتائج بواسطة <a href="https://haveibeenpwned.com/">haveibeenpwned.com</a></string>
+    <string name="home_frag_welcome_info">تأكد اذ تم تسريب بيانات موقع، بريدك الاكتروني او رقم هاتفك</string>
+    <string name="breach_safe_massage">خبر جيد — لا يوجد تسريبات او بيانات لهذا البريد</string>
+    <string name="home_frag_search_button">بحث</string>
+    <string name="domain_name">اسم الموقع: %1$s</string>
+    <string name="breach_date">تاريخ التسريب: %1$s</string>
+    <string name="compromised_data">البيانات المسربة:  %1$s.</string>
+    <string name="description">الوصف:  \\n%1$s.</string>
+    <string name="home_frag_email_category_button">بريد الكتروني</string>
+    <string name="home_frag_phone_category_button">رقم هاتف</string>
+    <string name="home_frag_domain_category_button">موقع الكتروني</string>
+    <string name="home_frag_date_sort_button">التاريخ</string>
+    <string name="home_frag_name_sort_button">الاسم</string>
+    <string name="home_frag_pwned_count_sort_button">عدد التسريبات</string>
+    <string name="home_frag_email_hint">البحث بالبريد الالكتروني</string>
+    <string name="home_frag_phone_number_hint">البحث برقم الهاتف</string>
+    <string name="home_frag_domain_hint">البحث بالموقع الاكتروني</string>
+    <string name="home_frag_invalid_search_error">بحث غير صحيح</string>
+    <string name="password_welcome_info">تأكد ان كان اي من الارقام السرية الخاصة بك مسربة</string>
+    <string name="password_search_button">بحث</string>
+    <string name="settings_frag_label">الاعدادات</string>
+    <string name="password_frag_passEditText_hint">البحث عن الرقم السري</string>
+</resources>

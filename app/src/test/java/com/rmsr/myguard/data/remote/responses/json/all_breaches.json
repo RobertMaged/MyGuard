@@ -1,0 +1,136 @@
+[
+  {
+    "Name": "BusinessAcumen",
+    "Title": "Business Acumen Magazine",
+    "Domain": "businessacumen.biz",
+    "BreachDate": "2014-04-25",
+    "AddedDate": "2014-05-11T04:25:48Z",
+    "ModifiedDate": "2014-05-11T04:25:48Z",
+    "PwnCount": 26596,
+    "Description": "In April 2014, the Australian \"Business Acumen Magazine\" website was <a href=\"http://1337mir.com/cracked/2014/04/businessacumen-biz-hacked-26000-user-password-leaked/\" target=\"_blank\" rel=\"noopener\">hacked by an attacker known as 1337MiR</a>. The breach resulted in over 26,000 accounts being exposed including usernames, email addresses and password stored with a weak cryptographic hashing algorithm (MD5 with no salt).",
+    "LogoPath": "https://haveibeenpwned.com/Content/Images/PwnedLogos/BusinessAcumen.png",
+    "DataClasses": [
+      "Email addresses",
+      "Names",
+      "Passwords",
+      "Usernames",
+      "Website activity"
+    ],
+    "IsVerified": true,
+    "IsFabricated": false,
+    "IsSensitive": false,
+    "IsRetired": false,
+    "IsSpamList": false
+  },
+  {
+    "Name": "CafeMom",
+    "Title": "CafeMom",
+    "Domain": "cafemom.com",
+    "BreachDate": "2014-04-10",
+    "AddedDate": "2017-11-09T19:54:20Z",
+    "ModifiedDate": "2017-11-09T19:55:00Z",
+    "PwnCount": 2628148,
+    "Description": "In 2014, the social network for mothers <a href=\"http://www.cafemom.com\" target=\"_blank\" rel=\"noopener\">CafeMom</a> suffered a data breach. The data surfaced alongside a number of other historical breaches including Kickstarter, Bitly and Disqus and contained 2.6 million email addresses and plain text passwords.",
+    "LogoPath": "https://haveibeenpwned.com/Content/Images/PwnedLogos/CafeMom.png",
+    "DataClasses": [
+      "Email addresses",
+      "Passwords"
+    ],
+    "IsVerified": true,
+    "IsFabricated": false,
+    "IsSensitive": false,
+    "IsRetired": false,
+    "IsSpamList": false
+  },
+  {
+    "Name": "CafePress",
+    "Title": "CafePress",
+    "Domain": "cafepress.com",
+    "BreachDate": "2019-02-20",
+    "AddedDate": "2019-08-05T01:18:43Z",
+    "ModifiedDate": "2019-08-05T20:02:32Z",
+    "PwnCount": 23205290,
+    "Description": "In February 2019, the custom merchandise retailer <a href=\"https://www.cafepress.com/\" target=\"_blank\" rel=\"noopener\">CafePress</a> suffered a data breach. The exposed data included 23 million unique email addresses with some records also containing names, physical addresses, phone numbers and passwords stored as SHA-1 hashes. The data was provided to HIBP by a source who requested it be attributed to \"JimScott.Sec@protonmail.com\".",
+    "LogoPath": "https://haveibeenpwned.com/Content/Images/PwnedLogos/CafePress.png",
+    "DataClasses": [
+      "Email addresses",
+      "Names",
+      "Passwords",
+      "Phone numbers",
+      "Physical addresses"
+    ],
+    "IsVerified": true,
+    "IsFabricated": false,
+    "IsSensitive": false,
+    "IsRetired": false,
+    "IsSpamList": false
+  },
+  {
+    "Name": "Gawker",
+    "Title": "Gawker",
+    "Domain": "gawker.com",
+    "BreachDate": "2010-12-11",
+    "AddedDate": "2013-12-04T00:00:00Z",
+    "ModifiedDate": "2013-12-04T00:00:00Z",
+    "PwnCount": 1247574,
+    "Description": "In December 2010, Gawker was attacked by the hacker collective &quot;Gnosis&quot; in retaliation for what was reported to be a feud between Gawker and 4Chan. Information about Gawkers 1.3M users was published along with the data from Gawker's other web presences including Gizmodo and Lifehacker. Due to the prevalence of password reuse, many victims of the breach <a href=\"http://www.troyhunt.com/2011/01/why-your-apps-security-design-could.html\" target=\"_blank\" rel=\"noopener\">then had their Twitter accounts compromised to send Acai berry spam</a>.",
+    "LogoPath": "https://haveibeenpwned.com/Content/Images/PwnedLogos/Gawker.png",
+    "DataClasses": [
+      "Email addresses",
+      "Passwords",
+      "Usernames"
+    ],
+    "IsVerified": true,
+    "IsFabricated": false,
+    "IsSensitive": false,
+    "IsRetired": false,
+    "IsSpamList": false
+  },
+  {
+    "Name": "Adobe",
+    "Title": "Adobe",
+    "Domain": "adobe.com",
+    "BreachDate": "2013-10-04",
+    "AddedDate": "2013-12-04T00:00:00Z",
+    "ModifiedDate": "2013-12-04T00:00:00Z",
+    "PwnCount": 152445165,
+    "Description": "In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, <em>encrypted</em> password and a password hint in plain text. The password cryptography was poorly done and <a href=\"http://stricture-group.com/files/adobe-top100.txt\" target=\"_blank\" rel=\"noopener\">many were quickly resolved back to plain text</a>. The unencrypted hints also <a href=\"http://www.troyhunt.com/2013/11/adobe-credentials-and-serious.html\" target=\"_blank\" rel=\"noopener\">disclosed much about the passwords</a> adding further to the risk that hundreds of millions of Adobe customers already faced.",
+    "LogoPath": "https://haveibeenpwned.com/Content/Images/PwnedLogos/Adobe.png",
+    "DataClasses": [
+      "Email addresses",
+      "Password hints",
+      "Passwords",
+      "Usernames"
+    ],
+    "IsVerified": true,
+    "IsFabricated": false,
+    "IsSensitive": false,
+    "IsRetired": false,
+    "IsSpamList": false
+  },
+  {
+    "Name": "Stratfor",
+    "Title": "Stratfor",
+    "Domain": "stratfor.com",
+    "BreachDate": "2011-12-24",
+    "AddedDate": "2013-12-04T00:00:00Z",
+    "ModifiedDate": "2013-12-04T00:00:00Z",
+    "PwnCount": 859777,
+    "Description": "In December 2011, &quot;Anonymous&quot; <a href=\"http://www.troyhunt.com/2011/12/5-website-security-lessons-courtesy-of.html\" target=\"_blank\" rel=\"noopener\">attacked the global intelligence company known as &quot;Stratfor&quot;</a> and consequently disclosed a veritable treasure trove of data including hundreds of gigabytes of email and tens of thousands of credit card details which were promptly used by the attackers to make charitable donations (among other uses). The breach also included 860,000 user accounts complete with email address, time zone, some internal system data and MD5 hashed passwords with no salt.",
+    "LogoPath": "https://haveibeenpwned.com/Content/Images/PwnedLogos/Stratfor.png",
+    "DataClasses": [
+      "Credit cards",
+      "Email addresses",
+      "Names",
+      "Passwords",
+      "Phone numbers",
+      "Physical addresses",
+      "Usernames"
+    ],
+    "IsVerified": true,
+    "IsFabricated": false,
+    "IsSensitive": false,
+    "IsRetired": false,
+    "IsSpamList": false
+  }
+]

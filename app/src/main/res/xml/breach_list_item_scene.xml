@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/fragment_motion_start">
+        <Constraint android:id="@+id/list_item_breach_logo" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/fragment_motion_end">
+        <Constraint android:id="@id/list_item_breach_logo" />
+        <Constraint
+            android:id="@+id/expanded_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintTop_toBottomOf="@id/main_info"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_4sdp" />
+        <Constraint
+            android:id="@+id/expand_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:layout_constraintTop_toTopOf="@id/list_item_breach_logo"
+            app:layout_constraintBottom_toBottomOf="@id/list_item_breach_logo"
+            android:rotation="180" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/fragment_motion_end"
+        app:constraintSetStart="@+id/fragment_motion_start" >
+        <KeyFrameSet>
+
+
+            <KeyAttribute
+                app:motionTarget="@+id/list_item_breach_logo"
+                app:framePosition="0" />
+        </KeyFrameSet>
+        <OnClick app:targetId="@+id/expand_icon" />
+
+    </Transition>
+</MotionScene>

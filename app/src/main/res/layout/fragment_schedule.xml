@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rmsr.myguard.presentation.ui.schedules.mainfragment.SchedulesMainFragment">
+
+    <!--        android:background="#5C6BC0"-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/window_background_custom">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_5sdp"
+            android:text="You can save \nEmails, Domains, Domain names\n to schedule check them later"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/schedule_check_recycler_compose"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_email_cardView" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/schedule_check_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/_2sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_email_cardView" />
+        <!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/add_email_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            android:layout_marginVertical="@dimen/_2sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/schedule_check_recycler_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/new_add_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/cardview_light_background"
+                android:hint="Add Email"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/schedule_setting_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_setting"
+        android:visibility="gone"
+        app:fabSize="mini"
+        app:flow_horizontalAlign="center"
+        app:layout_anchor="@+id/add_fab"
+        app:layout_anchorGravity="top|center_horizontal"
+
+        />
+    <!--            app:layout_constraintStart_toStartOf="@id/add_fab"-->
+    <!--            app:layout_constraintEnd_toEndOf="@id/add_fab"-->
+    <!--            app:layout_constraintBottom_toTopOf="@id/add_fab"-->
+    <!--            android:layout_marginHorizontal="@dimen/_12sdp"-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_14sdp"
+        android:src="@drawable/ic_add"
+        android:visibility="gone"
+        app:fabSize="normal"
+        app:layout_anchor="@id/schedule_check_recycler_compose"
+        app:layout_anchorGravity="bottom|end" />
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

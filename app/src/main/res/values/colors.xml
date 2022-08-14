@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?><!--<resources>-->
+<!--    <color name="purple_200">#FFBB86FC</color>-->
+<!--    <color name="purple_500">#FF6200EE</color>-->
+<!--    <color name="purple_700">#FF3700B3</color>-->
+<!--    <color name="teal_200">#FF03DAC5</color>-->
+<!--    <color name="teal_700">#FF018786</color>-->
+<!--    <color name="black">#FF000000</color>-->
+<!--    <color name="white">#FFFFFFFF</color>-->
+
+<!--</resources>-->
+
+
+<resources>
+    <color name="police_blue">#37596d</color>
+    <color name="anti_flash_white">#EFF4F7</color>
+    <color name="beau_blue">#BDD2DE</color>
+    <color name="oxford_blue">#073042</color>
+    <color name="rackley">#64869b</color>
+    <color name="amazon">#376D5C</color>
+    <color name="rich_black">#054233</color>
+    <color name="polished_pine">#659c89</color>
+    <color name="japanese_laurel">#1D7123</color>
+    <color name="carnelian">#B71C1C</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="transparent_2">#00000000</color>
+
+    <color name="color_primary_custom">@color/police_blue</color>
+    <color name="window_background_custom">@color/anti_flash_white</color>
+    <!--        <color name="background">#EFF4F7</color>-->
+    <!-- not sure about these attr just for settingFrag -->
+    <color name="app_background_color">@color/anti_flash_white</color>
+    <!-- not sure about these attr just for settingFrag -->
+    <color name="color_on_background_custom">@color/beau_blue</color>
+    <color name="color_primary_variant_custom">@color/oxford_blue</color>
+    <color name="color_on_primary_custom">@color/anti_flash_white</color>
+    <color name="color_accent_custom">@color/rackley</color>
+    <color name="color_secondary_custom">@color/amazon</color>
+    <color name="color_secondary_variant_custom">@color/rich_black</color>
+    <color name="color_on_secondary_custom">@color/black</color>
+    <color name="color_surface_custom">@color/anti_flash_white</color>
+    <color name="color_on_surface_custom">@color/amazon</color>
+    <color name="color_secondary_light">@color/polished_pine</color>
+
+    <color name="splash_screen_background_color">@color/police_blue</color>
+    <color name="success_green_color">@color/japanese_laurel</color>
+    <color name="error_red_color">@color/carnelian</color>
+
+    <!--    <color name="app_background_color">@color/white</color>-->
+
+</resources>
+
+
+    <!-- Set your custom app colors here -->
+    <!--    <color name="color_primary_custom_two">@color/mapbox_blue</color>-->
+    <!--    <color name="color_primary_dark_custom_two">@color/buttonColorDark</color>-->
+    <!--    <color name="color_accent_custom_two">@color/gplus_color_2</color>-->
+    <!--    <color name="header_text_color_two">@color/white</color>-->
+
+
+    <!--    <color name="bottom_nav_item_color">#008081</color>-->
+    <!--    <color name="bottom_nav_item_text_color">@color/blueGrey800</color>-->
+    <!--    <color name="bottom_nav_background">@color/white</color>-->
+
+    <!--    <color name="view_cart_bottom_bar_color">@color/mapbox_blue</color>-->
+    <!--    <color name="view_cart_bottom_bar_text_color">@color/white</color>-->
+
+    <!--    <color name="search_icon_color">@color/white</color>-->
+
+
+    <!--    <color name="edit_text_color">@color/blueGrey800</color>-->
+    <!--    <color name="edit_text_hint_color">@color/color_accent</color>-->
+
+    <!--    <color name="item_category_base_color">@color/mapbox_blue</color>-->
+
+    <!--    <color name="whatsapp_box_color">@color/darkGreen</color>-->
+    <!--    <color name="location_box_color">@color/instacart_green</color>-->
+    <!--    <color name="header_box_color">@color/blueGrey800</color>-->
+    <!--    <color name="header_box_text_color">@color/white</color>-->
+
+
+    <!--&lt;!&ndash;<color name="colorPrimary">@color/color_primary_custom</color>&ndash;&gt;-->
+    <!--&lt;!&ndash;<color name="colorPrimaryDark">@color/color_primary_dark_custom</color>&ndash;&gt;-->
+    <!--&lt;!&ndash;<color name="colorAccent">@color/color_accent_custom</color>&ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;Other colors for the project &ndash;&gt;-->
+
+    <!--<color name="instacart_green">#60ab59</color>-->
+
+    <!--<color name="orange_new">#ff9800</color>-->
+
+    <!--<color name="light_grey">#11000000</color>-->
+
+    <!--<color name="colorWhite">#FFffff</color>-->
+
+    <!--<color name="mapboxBlue">#1e8cab</color>-->
+
+    <!--<color name="twitter_blue">#1DA1F2</color>-->
+
+
+    <!--<color name="teal">#00796B</color>-->
+    <!--<color name="darkGreen">#2E7D32</color>-->
+    <!--<color name="orangeDark">#EF6C00</color>-->
+    <!--<color name="deepOrange900">#BF360C</color>-->
+    <!--<color name="deepOrange800">#D84315</color>-->
+    <!--<color name="grey800">#424242</color>-->
+    <!--<color name="blueGrey800">#37474F</color>-->
+
+    <!--<color name="blueGrey800Transparent">#aa37474F</color>-->
+    <!--<color name="cyan900">#006064</color>-->
+
+    <!--<color name="shopItemColor">#22000000</color>-->
+
+    <!--<color name="phonographyBlue">#006373</color>-->
+
+
+    <!--<color name="slate_grey">#2F4F4F</color>-->
+
+
+    <!--&lt;!&ndash; colors &ndash;&gt;-->
+
+
+    <!--<color name="backgroundClean">#000000</color>-->
+    <!--<color name="backgroundTinted">#88006064</color>-->
+    <!--<color name="gplus_color_2Alpha">#88f4b400</color>-->
+
+    <!--<color name="buttonColor">#037BA3</color>-->
+    <!--<color name="buttonColorDark">#036a8c</color>-->
+
+    <!--<color name="sky_blue">#87ceeb</color>-->
+
+
+    <!--<color name="orange">#ff6600</color>-->
+    <!--<color name="itemAvailable">#00897B</color>-->
+
+
+    <!--<integer-array name="gplus_colors">-->
+    <!--    <item>@color/gplus_color_1</item>-->
+    <!--    <item>@color/gplus_color_2</item>-->
+    <!--    <item>@color/gplus_color_3</item>-->
+    <!--    <item>@color/gplus_color_4</item>-->
+    <!--</integer-array>-->
+
+
+    <!--<color name="backgroundTinted_backup">#88006064</color>-->
+
+
+    <!--<color name="gplus_color_1">#3e802f</color>-->
+    <!--<color name="gplus_color_2">#f4b400</color>-->
+    <!--<color name="gplus_color_3">#427fed</color>-->
+    <!--<color name="gplus_color_4">#b23424</color>-->
+    <!--<color name="mapbox_blue">#1e8cab</color>-->
+
+    <!--<color name="blue_color">#468284</color>-->
+
+
+    <!--<resources>-->
+    <!--    <color name="purple_200">#FFBB86FC</color>-->
+    <!--    <color name="purple_500">#FF6200EE</color>-->
+    <!--    <color name="purple_700">#FF720D5D</color>-->
+    <!--    <color name="purple_800">#FF5D1049</color>-->
+    <!--    <color name="purple_900">#FF4E0D3A</color>-->
+    <!--    <color name="teal_200">#FF03DAC5</color>-->
+    <!--    <color name="teal_700">#FF018786</color>-->
+    <!--    <color name="black">#FF000000</color>-->
+    <!--    <color name="white">#FFFFFFFF</color>-->
+    <!--    <color name="red">#FFE30425</color>-->
+    <!--    -->
+    <!--    <color name="blue_600">#4A6572</color>-->
+    <!--    <color name="blue_700">#344955</color>-->
+    <!--    <color name="blue_800">#232F34</color>-->
+    <!--    -->
+    <!--    <color name="orange_500">#F9AA33</color>-->
+
+    <!--&lt;!&ndash;    <color name="colorPrimary">#5D1049</color>&ndash;&gt;-->
+    <!--&lt;!&ndash;    <color name="colorPrimaryDark">#3D0A2C</color>&ndash;&gt;-->
+    <!--&lt;!&ndash;    <color name="colorAccent">#E30425</color>&ndash;&gt;-->
+
+    <!--    <color name="colorPrimary">@color/blue_700</color>-->
+    <!--    <color name="colorPrimaryVariant">@color/blue_800</color>-->
+    <!--    <color name="colorSecondary">@color/orange_500</color>-->
+    <!--    <color name="colorSecondaryVariant">#018786</color>-->
+
+    <!--    <color name="colorBackground">#FFFFFF</color>-->
+    <!--    <color name="colorSurface">#FFFFFF</color>-->
+    <!--    <color name="colorError">#B00020</color>-->
+
+    <!--    <color name="colorOnPrimary">@color/blue_600</color>-->
+    <!--    <color name="colorOnSecondary">#000000</color>-->
+    <!--    <color name="colorOnBackground">#000000</color>-->
+    <!--    <color name="colorOnSurface">#000000</color>-->
+    <!--    <color name="colorOnError">#FFFFFF</color>-->
+
+
+    <!--    <color name="colorAccent">#E30425</color>-->
+
+    <!--</resources>-->

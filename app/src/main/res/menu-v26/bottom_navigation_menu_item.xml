@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/emailFragment"
+        android:icon="@drawable/ic_home"
+        android:orderInCategory="0"
+        android:title="@string/main_activity_bottomnav_home_button_title"
+        android:tooltipText="@string/main_activity_bottomnav_home_button_tip"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/passwordFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_password"
+        android:orderInCategory="1"
+        android:title="@string/main_activity_bottomnav_password_button_title"
+        android:tooltipText="@string/main_activity_bottomnav_password_button_tip"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/scheduleFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_schedule"
+        android:orderInCategory="2"
+        android:title="@string/main_activity_bottomnav_schedules_button_title"
+        android:tooltipText="@string/main_activity_bottomnav_saved_accounts_button_tip"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu"
+        android:orderInCategory="3"
+        android:title="@string/main_activity_bottomnav_more_button_title"
+        android:tooltipText="@string/main_activity_bottomnav_more_button_tip"
+        app:showAsAction="always" />
+
+</menu>

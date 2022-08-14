@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="info_button_style">
+        <item name="android:layout_width">@dimen/_30sdp</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_4sdp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:elevation">@dimen/_2sdp</item>
+        <item name="android:translationZ">@dimen/_2sdp</item>
+
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.AddButton">
+        <item name="android:radius">@dimen/_30sdp</item>
+        <item name="cornerRadius">@dimen/_30sdp</item>
+        <item name="cardCornerRadius">@dimen/_30sdp</item>
+        <item name="android:paddingTop">@dimen/_16sdp</item>
+        <item name="android:paddingBottom">@dimen/_16sdp</item>
+        <item name="android:layout_marginStart">@dimen/_20sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_20sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_20sdp</item>
+        <!--        <item name="elevation">@dimen/_10sdp</item>-->
+        <!--        <item name="android:elevation">@dimen/_10sdp</item>-->
+        <!--        <item name="android:translationZ">@dimen/_10sdp</item>-->
+        <item name="cardElevation">@dimen/_10sdp</item>
+        <item name="alpha">0.85</item>
+        <item name="android:alpha">0.85</item>
+
+    </style>
+</resources>
+
