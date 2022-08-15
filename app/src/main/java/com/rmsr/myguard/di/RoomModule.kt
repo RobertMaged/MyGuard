@@ -2,7 +2,6 @@ package com.rmsr.myguard.di
 
 import android.content.Context
 import androidx.room.Room
-import com.rmsr.myguard.BuildConfig
 import com.rmsr.myguard.data.database.MyGuardDatabase
 import com.rmsr.myguard.data.database.converters.MyGuardDbConverters
 import com.rmsr.myguard.data.database.dao.*
@@ -23,10 +22,6 @@ object RoomModule {
 
         return Room.databaseBuilder(context, MyGuardDatabase::class.java, "myguard_db")
             .addTypeConverter(MyGuardDbConverters())
-            .apply {
-                if (BuildConfig.DEBUG)
-                    createFromAsset("myguard_db.db")
-            }
             .fallbackToDestructiveMigration()
             .build()
     }
